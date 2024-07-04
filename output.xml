@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-07-04T15:22:30.414366" rpa="false" schemaversion="5">
+<suite id="s1" name="Link-To-This-Job-Verification" source="C:\Users\37529\OneDrive\Рабочий стол\Kate\test-task-robot-fr\link-to-this-job-verification.robot">
+<test id="s1-t1" name="Open Website and Verify Job Link" line="12">
+<kw name="Open Browser" owner="Browser">
+<msg time="2024-07-04T15:22:31.228816" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2024-07-04T15:22:31.229813" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\37529\\OneDrive\\\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b\\Kate\\test-task-robot-fr\\browser\\traces\\ec6c3cd9-2720-4389-a19b-f207001cb319"}</msg>
+<msg time="2024-07-04T15:22:31.485662" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\37529\\OneDrive\\Рабочий стол\\Kate\\test-task-robot-fr\\browser\\traces\\ec6c3cd9-2720-4389-a19b-f207001cb319"}</msg>
+<msg time="2024-07-04T15:22:31.486659" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2024-07-04T15:22:31.533534" level="INFO">Successfully created context. </msg>
+<msg time="2024-07-04T15:22:31.533534" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<msg time="2024-07-04T15:22:40.754585" level="INFO">Successfully initialized new page object and opened url: https://www.multitude.com/careers</msg>
+<arg>${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2024-07-04T15:22:31.227819" elapsed="9.526766"/>
+</kw>
+<kw name="Set Browser Timeout" owner="Browser">
+<msg time="2024-07-04T15:22:40.760568" level="INFO">Set timeout to: 20000</msg>
+<arg>20s</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="PASS" start="2024-07-04T15:22:40.755583" elapsed="0.004985"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-07-04T15:22:40.761566" level="INFO">Clicks the element 'css=[name=cookieAgree]'.</msg>
+<arg>css=${CSS_COOKIE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-04T15:22:40.760568" elapsed="0.134748"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-07-04T15:22:40.896313" level="INFO">Clicks the element 'css=.banner-bottom-content-alignment a.primary-cta'.</msg>
+<arg>css=${CSS_SELECTOR}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-04T15:22:40.895316" elapsed="0.095744"/>
+</kw>
+<kw name="Switch Page" owner="Browser">
+<msg time="2024-07-04T15:22:40.993055" level="INFO">Switching to page NEW,context CURRENT, browser CURRENT</msg>
+<msg time="2024-07-04T15:22:43.674059" level="INFO">Activated new page page=9873d31f-b6d4-4a41-9656-f1a529f8a561</msg>
+<arg>NEW</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Switches the active browser page to another open page by ``id`` or ``NEW``.</doc>
+<status status="PASS" start="2024-07-04T15:22:40.993055" elapsed="2.681004"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-07-04T15:22:43.675064" level="INFO">Clicks the element 'css=[href="/careers/1131"]'.</msg>
+<arg>css=${CSS_POSITION}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-04T15:22:43.675064" elapsed="9.994622"/>
+</kw>
+<kw name="Get Url" owner="Browser">
+<msg time="2024-07-04T15:22:53.672678" level="INFO">${page_url} = https://multitude.bamboohr.com/careers/1131</msg>
+<var>${page_url}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the current URL.</doc>
+<status status="PASS" start="2024-07-04T15:22:53.669686" elapsed="0.002992"/>
+</kw>
+<kw name="Get Attribute" owner="Browser">
+<msg time="2024-07-04T15:22:55.033796" level="INFO">Attribute is: 'https://multitude.bamboohr.com/careers/1131'</msg>
+<msg time="2024-07-04T15:22:55.033796" level="INFO">${input_value} = https://multitude.bamboohr.com/careers/1131</msg>
+<var>${input_value}</var>
+<arg>xpath=${XPATH_LINK_TO_JOB}</arg>
+<arg>value</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-04T15:22:53.673676" elapsed="1.360120"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${input_value}</arg>
+<arg>${page_url}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-07-04T15:22:55.033796" elapsed="0.000997"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2024-07-04T15:22:55.808117" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2024-07-04T15:22:55.034793" elapsed="0.773324"/>
+</kw>
+<status status="PASS" start="2024-07-04T15:22:31.224827" elapsed="24.584288"/>
+</test>
+<status status="PASS" start="2024-07-04T15:22:30.416389" elapsed="25.485483"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Link-To-This-Job-Verification">Link-To-This-Job-Verification</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-07-04T15:22:31.228816" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+</errors>
+</robot>
